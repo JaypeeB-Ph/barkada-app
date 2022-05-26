@@ -53,12 +53,14 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\ResponsiveWindowScript.cs" />
-    <Compile Include="Assets\DeleteWindowButton.cs" />
-    <Compile Include="Assets\ApplicationManagerScipt.cs" />
-    <Compile Include="Assets\InstantiateNewWindowScript.cs" />
-    <Compile Include="Assets\ContentManagerScript.cs" />
-    <Compile Include="Assets\Customer.cs" />
+    <Compile Include="Assets\Scripts\ResponsiveWindowScript.cs" />
+    <Compile Include="Assets\Scripts\DeleteWindowButton.cs" />
+    <Compile Include="Assets\Scripts\InstantiateNewWindowScript.cs" />
+    <Compile Include="Assets\Scripts\ApplicationManagerScipt.cs" />
+    <Compile Include="Assets\Scripts\Customer.cs" />
+    <Compile Include="Assets\Scripts\ContentManagerScript.cs" />
+    <Compile Include="Assets\Scripts\CustomerWindowScript.cs" />
+    <Compile Include="Assets\Scripts\ContentManagerForCustomerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
