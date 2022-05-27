@@ -16,6 +16,10 @@ public class CustomerWindowScript : MonoBehaviour
     [SerializeField] Text totalSumText;
     [SerializeField] InputField cash, change;
 
+    [Header("Customize")]
+    [SerializeField] Image footerImage;
+    [SerializeField] Color color;
+
 
     private double total;
     private double[] pricesInDouble = new double[5];
@@ -32,7 +36,11 @@ public class CustomerWindowScript : MonoBehaviour
         totalSumText.text = "\u20B1".ToString() + "   " + total.ToString();
     }
 
-
+    public void ChangeColor()
+    {
+        footerImage.color = color;
+      
+    }
 
 
     public void CalculateChange()

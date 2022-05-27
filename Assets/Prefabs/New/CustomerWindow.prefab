@@ -115,6 +115,10 @@ MonoBehaviour:
   totalSumText: {fileID: 8789583315577660887}
   cash: {fileID: 8789583316239944750}
   change: {fileID: 8789583315183742369}
+  footerImage: {fileID: 8789583316362664105}
+  cashImage: {fileID: 8789583316239944749}
+  changeImage: {fileID: 8789583315183742368}
+  color: {r: 0.59607846, g: 1, b: 0.59607846, a: 1}
 --- !u!1 &3626193695041655173
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +496,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3626193695012398805}
+        m_TargetAssemblyTypeName: CustomerWindowScript, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6061,7 +6077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TOTAL  --------------------------->
+  m_Text: 'TOTAL:'
 --- !u!1 &8789583316042225021
 GameObject:
   m_ObjectHideFlags: 0

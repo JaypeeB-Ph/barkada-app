@@ -54,13 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ResponsiveWindowScript.cs" />
-    <Compile Include="Assets\Scripts\DeleteWindowButton.cs" />
+    <Compile Include="Assets\Scripts\SplashScript.cs" />
+    <Compile Include="Assets\Scripts\CustomerWindowScript.cs" />
     <Compile Include="Assets\Scripts\InstantiateNewWindowScript.cs" />
     <Compile Include="Assets\Scripts\ApplicationManagerScipt.cs" />
     <Compile Include="Assets\Scripts\Customer.cs" />
-    <Compile Include="Assets\Scripts\ContentManagerScript.cs" />
-    <Compile Include="Assets\Scripts\CustomerWindowScript.cs" />
     <Compile Include="Assets\Scripts\ContentManagerForCustomerScript.cs" />
+    <Compile Include="Assets\Scripts\ContentManagerScript.cs" />
+    <Compile Include="Assets\Scripts\Orders.cs" />
+    <Compile Include="Assets\IndividualOrderScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

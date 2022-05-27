@@ -41,8 +41,6 @@ public class Customer
 
 
 
-
-
     public void AddItems(string item)
     {
         this.items.Add(item);
