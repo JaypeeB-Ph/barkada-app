@@ -5,8 +5,11 @@ using UnityEngine;
 public class InstantiateNewWindowScript : MonoBehaviour
 {
     public GameObject windowPrefab;
-    
 
+    private void Start()
+    {
+        InstantiateNewWindow();
+    }
 
     public void InstantiateNewWindow()
     {

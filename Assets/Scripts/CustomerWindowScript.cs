@@ -24,12 +24,15 @@ public class CustomerWindowScript : MonoBehaviour
     private double total;
     private double[] pricesInDouble = new double[5];
 
+    private double changeValue;
+
 
     private void Start()
     {
+        changeValue = 0;
 
         //Calculating and showing total
-        for(int i = 0; i <= prices.Length - 1; i++)
+        for (int i = 0; i <= prices.Length - 1; i++)
         {
             total += pricesInDouble[i];
         }
@@ -39,15 +42,26 @@ public class CustomerWindowScript : MonoBehaviour
     public void ChangeColor()
     {
         footerImage.color = color;
-      
+        cash.image.color = color;
+        change.image.color = color;
+        change.text = "\u20B1".ToString() + "   " + changeValue.ToString();
+
+        //
+        cash.contentType = InputField.ContentType.Standard;
+        cash.text = "\u20B1".ToString() + " " + cash.text;
+        cash.interactable = false;
     }
 
 
     public void CalculateChange()
     {
-        if(cash != null)
+
+       
+
+        if (cash.contentType == InputField.ContentType.IntegerNumber)
         {
-            change.text = "\u20B1".ToString() + "   " + (int.Parse(cash.text) - total).ToString();
+            changeValue = (double.Parse(cash.text) - total);
+            change.text = "\u20B1".ToString() + "   " + changeValue.ToString();    
         }     
     }
 

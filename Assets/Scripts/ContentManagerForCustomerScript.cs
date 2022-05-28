@@ -39,7 +39,9 @@ public class ContentManagerForCustomerScript : MonoBehaviour
 
     private void Start()
     {
-        foreach(Customer c in customers)
+      
+
+        foreach (Customer c in customers)
         {
             CustomerWindowScript cws;
 
@@ -71,26 +73,34 @@ public class ContentManagerForCustomerScript : MonoBehaviour
         totalValueText.text = "\u20B1".ToString() + " " + totalValue.ToString();
     }
 
+    bool showSummary = true;
 
     public void ShowOrderSummary()
     {
-       
-        Summarize();
-
-        foreach (Orders o in orders)
+        if (showSummary)
         {
-            IndividualOrderScript ios;
+            Summarize();
 
-            //Instantiating window
-            GameObject panel = Instantiate(individualPanelPrefab);
-            panel.transform.SetParent(targetPanelForSummaryOrders.transform);
-            // accessing the script
-            ios = panel.GetComponent<IndividualOrderScript>();
+            foreach (Orders o in orders)
+            {
+                IndividualOrderScript ios;
 
-            //setting values
-            ios.SetItemText(o.GetItem());
-            ios.SetQTYText(o.GetQty());
+                //Instantiating window
+                GameObject panel = Instantiate(individualPanelPrefab);
+                panel.transform.SetParent(targetPanelForSummaryOrders.transform);
+                // accessing the script
+                ios = panel.GetComponent<IndividualOrderScript>();
+
+                //setting values
+                ios.SetItemText(o.GetItem());
+                ios.SetQTYText(o.GetQty());
+            }
+
+            showSummary = false;
         }
+
+        summaryPanel.SetActive(true);
+
 
     }
 
@@ -125,9 +135,6 @@ public class ContentManagerForCustomerScript : MonoBehaviour
 
             quantity = 0;
         }
-
-        summaryPanel.SetActive(true);
-
     }
 
 
