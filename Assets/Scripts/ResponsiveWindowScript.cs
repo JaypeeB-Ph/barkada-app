@@ -8,6 +8,8 @@ public class ResponsiveWindowScript : MonoBehaviour
     [Header("Reference objects")]
     [SerializeField] GameObject calculatePanel;
     [SerializeField] Button deleteButton;
+    [SerializeField] Button addNewButton;
+    [SerializeField] Button calculateButton;
 
 
 
@@ -42,7 +44,26 @@ public class ResponsiveWindowScript : MonoBehaviour
    
     private void Update()
     {
-        cm = transform.parent.gameObject.GetComponent<ContentManagerScript>();  
+        cm = transform.parent.gameObject.GetComponent<ContentManagerScript>();
+        
+
+
+        for(int i = 0; i <= current; i++)
+        {
+            if ((itemNameIF[i].text.Length <= 0 || priceIF[i].text.Length <= 0)
+                || nameIF.text.Length <= 0)
+            {
+                addNewButton.interactable = false;
+                calculateButton.interactable = false;
+            }
+            else
+            {
+                addNewButton.interactable = true;
+                calculateButton.interactable = true;
+            }
+            
+        }
+
     }
 
 
